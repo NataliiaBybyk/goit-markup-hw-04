@@ -12,7 +12,6 @@ body {
   width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
-  justify-content: space-between;
 }
 /* Обнуюємо марджени заголовків,абзаців та списків*/
 h1,
@@ -155,6 +154,16 @@ address {
   padding: 188px 0;
 }
 
+.hero__bg-image {
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
 .main-title {
   text-align: center;
   font-size: 56px;
@@ -199,6 +208,17 @@ address {
 
 .benefits-list-item {
   width: 264px;
+}
+
+.benefits-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  border-radius: 4px;
+  border: 1px solid var(--LIGHT-SLATE, #8e8f99);
+  background: var(--CLOUD, #f4f4fd);
+  margin-bottom: 8px;
 }
 
 .benefits-list-title {
@@ -265,6 +285,35 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--SLATE, #434455);
+  margin-bottom: 8px;
+}
+
+.team-list-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-item-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.team-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-link-icon:hover,
+.team-link-icon:focus {
+  background-color: #404bbf;
 }
 
 /* ===============================OUR  PORTFOLIO=========================*/
@@ -314,10 +363,45 @@ address {
   color: var(--SLATE, #434455);
 }
 
+.portfolio-overley-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overley-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #f4f4fd;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover .portfolio-overley-text,
+.portfolio-list-item:focus .portfolio-overley-text {
+  transform: translateY(0);
+}
 /* ===============================FOOTER STYLES=========================*/
 .page-footer {
   background-color: var(--NAVY-BLUE, #2e2f42);
   padding: 100px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-logo-wrapper {
+  margin-right: 120px;
 }
 
 .logotype-footer {
@@ -335,4 +419,45 @@ address {
   letter-spacing: 0.02em;
   color: var(--CLOUD, #f4f4fd);
   width: 264px;
+}
+
+.footer-icon-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.footer-list-icons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+}
+
+.footer-item-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icon {
+  fill: #f4f4fd;
+}
+
+.footer-link-icon:hover,
+.footer-link-icon:focus {
+  background-color: #31d0aa;
 }
