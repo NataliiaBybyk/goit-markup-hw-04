@@ -176,13 +176,16 @@ address {
 }
 
 .hero__bg-image {
+  max-width: 1440px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero/bg.jpg);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: 0 auto;
 }
 
 .main-title {
@@ -210,6 +213,7 @@ address {
   border: none;
   border-radius: 4px;
   padding: 16px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-service-btn:hover,
@@ -284,6 +288,9 @@ address {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   width: calc((100%-72px) / 4);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-wrapper {
@@ -337,6 +344,9 @@ address {
   background-color: #404bbf;
 }
 
+.team-icon {
+  fill: #f4f4fd;
+}
 /* ===============================OUR  PORTFOLIO=========================*/
 .portfolio {
   padding: 120px 0;
@@ -366,8 +376,13 @@ address {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-list-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .portfolio-list-name {
   font-size: 20px;
   font-weight: 500;
